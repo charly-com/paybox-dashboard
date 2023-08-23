@@ -22,8 +22,8 @@ function nav() {
             </p>
 
           </div>
-            <IoCaretDownOutline size={16} className="" />
         </div>
+            <IoCaretDownOutline size={16} className="" />
       </div>
     </div>
   );
