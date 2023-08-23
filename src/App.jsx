@@ -6,7 +6,7 @@ import profile from "./assets/security-user.png";
 import redar from "./assets/radar.svg";
 import { RiHome5Line } from "react-icons/ri";
 import { IoChevronForwardSharp } from "react-icons/io5";
-import { dropdownData } from "././data/custom.js";
+import { dropdownData } from "././data/custom.jsx";
 import Main from "./components/main.jsx";
 
 import "./App.css";

@@ -3,7 +3,7 @@ import { IoCaretDownOutline } from "react-icons/io5";
 import person from "../assets/person.png";
 function nav() {
   return (
-    <div className="flex justify-between rounded-t-[20px] rounded-b bg-white h-[85px] w-[100%] p-4">
+    <div className="flex justify-between rounded-[20px]  bg-white h-[85px] w-[100%] p-4">
       <div className="flex items-center space-x-2">
         <p className="text-[#242424] font-nunito text-lg font-semibold">
           Analytics dashboard
