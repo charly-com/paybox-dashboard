@@ -18,89 +18,101 @@ function App() {
     setOpenDropdownIndex(index === openDropdownIndex ? -1 : index);
   };
   return (
-    <div className="bg-[#07112D] w-screen h-screen rounded-[20px] flex">
-      <div>
-        <img src={playbox} alt="playbox" />
-        <p className="text-white font-clash-display text-base font-normal">
-          byLibertyPay
-        </p>
-        <div className="custom-line"></div>
-        <div className="flex items-center space-x-2">
-          <RiHome5Line size={24} className="text-white" />
-          <span className="text-white font-nunito text-base font-semibold">
-            Home
-          </span>
-        </div>
-        <div className="flex items-center space-x-2">
-          <img
-            src={analytics}
-            alt="Your Image"
-            className="w-5 h-5 flex-shrink-0"
-          />
-          <span className="text-white font-nunito text-base font-semibold">
-            Analytics Dashboard
-          </span>
-        </div>
-        <div className="custom-line"></div>
+    <div className="bg-[#07112D] w-full h-full  rounded-[20px] flex">
+      <div className="px-5 py-20 w-[16%] gap-3">
         <div>
-          {dropdownData.map((item, index) => (
-            <div className="relative" key={index}>
-              <div
-                className="flex items-center space-x-2 cursor-pointer"
-                onClick={() => toggleDropdown(index)}
-              >
-                <img
-                  src={item.imageSrc}
-                  alt="Your Image"
-                  className="w-5 h-5 flex-shrink-0"
-                />
-                <span className="text-white font-nunito text-base font-semibold">
-                  {item.text}
-                </span>
-                <IoChevronForwardSharp size={24} className="text-white" />
-              </div>
-              {openDropdownIndex === index && (
-                <div className="absolute mt-2 py-2 bg-white shadow-lg rounded">
-                  {item.options.map((option, optionIndex) => (
-                    <a
-                      href="#"
-                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                      key={optionIndex}
-                    >
-                      {option}
-                    </a>
-                  ))}
+          <img src={playbox} alt="playbox" />
+          <p className="text-white font-clash-display text-base font-normal mb-5 ">
+            byLibertyPay
+          </p>
+          <div className="custom-line"></div>
+          <div className="flex items-center space-x-2 mt-5 mb-3">
+            <RiHome5Line size={24} className="text-white" />
+            <span className="text-white font-nunito text-[15px] font-normal">
+              Home
+            </span>
+          </div>
+          <div className="flex items-center space-x-2  mb-5 ">
+            <img
+              src={analytics}
+              alt="Your Image"
+              className="w-5 h-5 flex-shrink-0"
+            />
+            <span className="text-white font-nunito text-[15px] font-normal ">
+              Analytics Dashboard
+            </span>
+          </div>
+          <div className="custom-line mb-5"></div>
+          <div>
+            {dropdownData.map((item, index) => (
+              <div className="relative flex" key={index}>
+                <div
+                  className="flex items-center space-x-2 cursor-pointer"
+                  onClick={() => toggleDropdown(index)}
+                >
+                  <img
+                    src={item.imageSrc}
+                    alt="Your Image"
+                    className="w-5 h-5 flex-shrink-0"
+                  />
+                  <span className="text-white font-nunito text-[15px] font-normal">
+                    {item.text}
+                  </span>
+                  <IoChevronForwardSharp size={24} className="text-white" />
                 </div>
-              )}
-            </div>
-          ))}
-        </div>
-        <div className="custom-line"></div>
-        <div className="flex items-center space-x-2">
-          <img src={medal} alt="Your Image" className="w-5 h-5 flex-shrink-0" />
-          <span className="text-white font-nunito text-base font-semibold">
-            Leaderboard
-          </span>
-        </div>
-        <div className="flex items-center space-x-2">
-          <img
-            src={profile}
-            alt="Your Image"
-            className="w-5 h-5 flex-shrink-0"
-          />
-          <span className="text-white font-nunito text-base font-semibold">
-            Profile & Settings
-          </span>
-        </div>
-        <div className="flex items-center space-x-2">
-          <img src={redar} alt="Your Image" className="w-5 h-5 flex-shrink-0" />
-          <span className="text-white font-nunito text-base font-semibold">
-            Profile & Settings
-          </span>
-          <IoChevronForwardSharp size={24} className="text-white" />
+                {openDropdownIndex === index && (
+                  <div className="absolute mt-2 py-2 bg-white shadow-lg rounded">
+                    {item.options.map((option, optionIndex) => (
+                      <a
+                        href="#"
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                        key={optionIndex}
+                      >
+                        {option}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+          <div className="custom-line mt-5 "></div>
+          <div className="flex items-center space-x-2 mt-5">
+            <img
+              src={medal}
+              alt="Your Image"
+              className="w-5 h-5 flex-shrink-0"
+            />
+            <span className="text-white font-nunito text-[15px] font-normal">
+              Leaderboard
+            </span>
+          </div>
+          <div className="flex items-center space-x-2 mt-">
+            <img
+              src={profile}
+              alt="Your Image"
+              className="w-5 h-5 flex-shrink-0"
+            />
+            <span className="text-white font-nunito text-[15px] font-normal">
+              Profile & Settings
+            </span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <img
+              src={redar}
+              alt="Your Image"
+              className="w-5 h-5 flex-shrink-0"
+            />
+            <span className="text-white font-nunito text-[15px] font-normal">
+            Bank performance
+            </span>
+            <IoChevronForwardSharp size={24} className="text-white" />
+          </div>
         </div>
       </div>
-      <Main />
+      <div className="py-4 px-6 w-[84%]">
+        <Main />
+      </div>
     </div>
   );
 }
