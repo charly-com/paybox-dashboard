@@ -45,9 +45,9 @@ function App() {
           <div className="custom-line mb-5"></div>
           <div>
             {dropdownData.map((item, index) => (
-              <div className="relative flex" key={index}>
+              <div className="relative  flex items-center" key={index}>
                 <div
-                  className="flex items-center space-x-2 cursor-pointer"
+                  className="flex items-center justify-between space-x-2 mt-4 cursor-pointer"
                   onClick={() => toggleDropdown(index)}
                 >
                   <img
@@ -77,7 +77,7 @@ function App() {
             ))}
           </div>
           <div className="custom-line mt-5 "></div>
-          <div className="flex items-center space-x-2 mt-5">
+          <div className="flex items-center space-x-2 mt-5 mb-3">
             <img
               src={medal}
               alt="Your Image"
@@ -87,7 +87,7 @@ function App() {
               Leaderboard
             </span>
           </div>
-          <div className="flex items-center space-x-2 mt-">
+          <div className="flex items-center space-x-2 mb-3">
             <img
               src={profile}
               alt="Your Image"
